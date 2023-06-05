@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "app.jwt.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'app.jwt.secret'"
+  },
+  {
+    "name": "app.jwt.expiration.ms",
+    "type": "java.lang.String",
+    "description": "A description for 'app.jwt.expiration.ms'"
+  },
+  {
+    "name": "org.springframework.security",
+    "type": "java.lang.String",
+    "description": "A description for 'org.springframework.security'"
+  },
+  {
+    "name": "org.springframework.web",
+    "type": "java.lang.String",
+    "description": "A description for 'org.springframework.web'"
+  }
+]}

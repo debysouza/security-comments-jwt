@@ -1,0 +1,613 @@
+{
+  "info": {
+    "name": "API-20231-Segurança",
+    "_postman_id": "b1addec0-38a4-4673-b88f-346576263bc1",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "id": "f62ae957-aeac-467f-91cb-30e62782b9f5",
+      "name": "ROLE_USER Save",
+      "request": {
+        "url": {
+          "host": "{{Server 1}}",
+          "path": [
+            "roles"
+          ]
+        },
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "",
+            "disabled": false
+          },
+          {
+            "key": "Accept",
+            "value": "*/*",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\": \"ROLE_USER\"\n}",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [],
+          "body": "any",
+          "code": 200,
+          "name": "Response_200",
+          "id": "d0f1ed01-9d4e-4bef-ac65-55079de532ed"
+        }
+      ]
+    },
+    {
+      "id": "5cfffd8f-a959-4722-b707-e3c06a0e3801",
+      "name": "ROLE_MODERATOR Save",
+      "request": {
+        "url": {
+          "host": "{{Server 1}}",
+          "path": [
+            "roles"
+          ]
+        },
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "",
+            "disabled": false
+          },
+          {
+            "key": "Accept",
+            "value": "*/*",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\": \"ROLE_MODERATOR\"\n}",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [],
+          "body": "any",
+          "code": 200,
+          "name": "Response_200",
+          "id": "8ce2efc1-cae0-4f40-84be-9b3c9114b414"
+        }
+      ]
+    },
+    {
+      "id": "dbd5f1b1-faf5-4d58-9fa2-addb984a1865",
+      "name": "ROLE_ADMIN Save",
+      "request": {
+        "url": {
+          "host": "{{Server 1}}",
+          "path": [
+            "roles"
+          ]
+        },
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "",
+            "disabled": false
+          },
+          {
+            "key": "Accept",
+            "value": "*/*",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\": \"ROLE_ADMIN\"\n}",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [],
+          "body": "any",
+          "code": 200,
+          "name": "Response_200",
+          "id": "0cf3bc98-b19d-4f82-8ff4-16d0f2dd11f1"
+        }
+      ]
+    },
+    {
+      "id": "e9ce4d6b-8133-41c4-a6d0-6f32b7811d06",
+      "name": "Test All",
+      "request": {
+        "url": {
+          "host": "{{Server 1}}",
+          "path": [
+            "test/all"
+          ]
+        },
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [],
+          "body": "any",
+          "code": 200,
+          "name": "Response_200",
+          "id": "500ded43-c0d3-4d9f-83b2-2cbf57e41ba4"
+        }
+      ]
+    },
+    {
+      "id": "64678cf6-68d2-4326-9663-261f1d92c469",
+      "name": "Test User Without Token",
+      "request": {
+        "url": {
+          "host": "{{Server 1}}",
+          "path": [
+            "test/user"
+          ]
+        },
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [],
+          "body": "any",
+          "code": 200,
+          "name": "Response_200",
+          "id": "6eb098f3-919c-414a-9412-ffa479ea509d"
+        }
+      ]
+    },
+    {
+      "id": "1cf25248-8812-4857-938e-a0dd488c43ca",
+      "name": "Test Protected User With Token",
+      "request": {
+        "url": {
+          "host": "{{Server 1}}",
+          "path": [
+            "test/user"
+          ]
+        },
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "token": "<<token>>",
+            "scope": ""
+          }
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [],
+          "body": "any",
+          "code": 200,
+          "name": "Response_200",
+          "id": "0fba50bd-8d2b-4021-941e-d82997b3212c"
+        }
+      ]
+    },
+    {
+      "id": "a92950ea-23fb-443e-b61f-ec1ebf961e0d",
+      "name": "Test Protected Moderator With Token",
+      "request": {
+        "url": {
+          "host": "{{Server 1}}",
+          "path": [
+            "test/mod"
+          ]
+        },
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "token": "<<token>>",
+            "scope": ""
+          }
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [],
+          "body": "any",
+          "code": 200,
+          "name": "Response_200",
+          "id": "234d7f7c-15ae-47c4-b179-7090b805be3c"
+        }
+      ]
+    },
+    {
+      "id": "7941d44c-654f-4a15-8886-086c865efc06",
+      "name": "Test Protected Admin With Token",
+      "request": {
+        "url": {
+          "host": "{{Server 1}}",
+          "path": [
+            "test/admin"
+          ]
+        },
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "token": "<<token>>",
+            "scope": ""
+          }
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [],
+          "body": "any",
+          "code": 200,
+          "name": "Response_200",
+          "id": "c029188f-6891-4c18-b6b5-5e4c55eb395b"
+        }
+      ]
+    },
+    {
+      "id": "65e33f9a-2238-40f7-9de4-e21c9d862dc3",
+      "name": "Signup Admin",
+      "request": {
+        "url": {
+          "host": "{{Server 2}}",
+          "path": [
+            "signup"
+          ]
+        },
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "",
+            "disabled": false
+          },
+          {
+            "key": "Accept",
+            "value": "*/*",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"username\" : \"administrator\",\n\t\"email\": \"admin@mail.com\",\n\t\"password\": \"12345678\",\n\t\"role\": [\"admin\"]\n}",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [],
+          "body": "any",
+          "code": 200,
+          "name": "Response_200",
+          "id": "69a25785-5895-445b-92d9-65ef4593c4c8"
+        }
+      ]
+    },
+    {
+      "id": "76a479f9-9c5c-4916-99df-bac60773389d",
+      "name": "Signup Moderator",
+      "request": {
+        "url": {
+          "host": "{{Server 2}}",
+          "path": [
+            "signup"
+          ]
+        },
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "",
+            "disabled": false
+          },
+          {
+            "key": "Accept",
+            "value": "*/*",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"username\" : \"moderator\",\n\t\"email\": \"mod@mail.com\",\n\t\"password\": \"12345678\",\n\t\"role\": [\"moderator\"]\n}",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [],
+          "body": "any",
+          "code": 200,
+          "name": "Response_200",
+          "id": "1b4e2b43-2cbe-4955-be9b-d672aae6791a"
+        }
+      ]
+    },
+    {
+      "id": "2cef2864-828b-40a7-a6fc-f1ab1a507744",
+      "name": "Signup User",
+      "request": {
+        "url": {
+          "host": "{{Server 2}}",
+          "path": [
+            "signup"
+          ]
+        },
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "",
+            "disabled": false
+          },
+          {
+            "key": "Accept",
+            "value": "*/*",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"username\" : \"user\",\n\t\"email\": \"user@mail.com\",\n\t\"password\": \"12345678\",\n\t\"role\": [\"user\"]\n}",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [],
+          "body": "any",
+          "code": 200,
+          "name": "Response_200",
+          "id": "d0a7242c-7d4e-4309-b85e-e488249cc233"
+        }
+      ]
+    },
+    {
+      "id": "d879e171-8a75-4992-98dd-beed792d2fc1",
+      "name": "Signin Usuario",
+      "request": {
+        "url": {
+          "host": "{{Server 2}}",
+          "path": [
+            "signin"
+          ]
+        },
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "",
+            "disabled": false
+          },
+          {
+            "key": "Accept",
+            "value": "*/*",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"username\" : \"user\",\n\t\"password\": \"12345678\"\n}",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [],
+          "body": "any",
+          "code": 200,
+          "name": "Response_200",
+          "id": "2e59e784-df78-405a-b14d-6df98cd3c938"
+        }
+      ]
+    },
+    {
+      "id": "d3514a15-00b8-4870-9585-b384f7912b11",
+      "name": "Signin Moderador",
+      "request": {
+        "url": {
+          "host": "{{Server 2}}",
+          "path": [
+            "signin"
+          ]
+        },
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "",
+            "disabled": false
+          },
+          {
+            "key": "Accept",
+            "value": "*/*",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"username\" : \"moderator\",\n\t\"password\": \"12345678\"\n}",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [],
+          "body": "any",
+          "code": 200,
+          "name": "Response_200",
+          "id": "12ef5289-1979-424c-953b-096e908dc647"
+        }
+      ]
+    },
+    {
+      "id": "9f2000f4-cfa0-4ca1-a712-2daa9a4e8401",
+      "name": "Signin Administrador",
+      "request": {
+        "url": {
+          "host": "{{Server 2}}",
+          "path": [
+            "signin"
+          ]
+        },
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "",
+            "disabled": false
+          },
+          {
+            "key": "Accept",
+            "value": "*/*",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"username\" : \"administrator\",\n\t\"password\": \"12345678\"\n}",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [],
+          "body": "any",
+          "code": 200,
+          "name": "Response_200",
+          "id": "4df415ea-e6e9-4de1-99e2-8976128b05c8"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "Server 1",
+      "value": "http://localhost:8080/api"
+    },
+    {
+      "key": "Server 2",
+      "value": "localhost:8080/api/auth"
+    }
+  ]
+}
