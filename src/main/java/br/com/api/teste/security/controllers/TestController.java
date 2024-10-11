@@ -17,16 +17,21 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 //@RequestMapping-> é utilizada para mapear uma URL específica para um método
 @RequestMapping("/test")
 public class TestController {
+	
 	@GetMapping("/all")
 	public String allAccess() {
 		return "Public Content.";
 	}
 
+	@SecurityRequirement(name="Bearer Auth")
+	@PreAuthorize("hasRole('USER')")
 	@GetMapping("/user")
 	public String userAccess() {
 		return "User Content.";
 	}
 
+	@SecurityRequirement(name="Bearer Auth")
+	@PreAuthorize("hasRole('MOD')")
 	@GetMapping("/mod")
 	public String moderatorAccess() {
 		return "Moderator Board.";
