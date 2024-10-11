@@ -50,8 +50,8 @@ public class SwaggerConfig {//classe para configurar o Swagger na aplicação
 				.url("https://www.apache.org/license/LICENSE-2.0");
 
 		//Construção do objeto Info, utilizado para fazer o cabeçalho na documentação do Swagger
-		Info info = new Info().title("Documentação API - Gerente Tarefas").version("1.0.0.0").contact(contact)
-				.description("API com endpoints do Gerente de Tarefas para testes.")
+		Info info = new Info().title("Documentação API - JWT").version("1.0.1").contact(contact)
+				.description("API com endpoints com JWT para testes.")
 				.termsOfService("https://www.teste.com/terms").license(apache);
 
 		//retorna o objeto OpenApi com as configurações acima definidas
